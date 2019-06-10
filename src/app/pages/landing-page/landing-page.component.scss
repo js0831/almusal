@@ -1,0 +1,111 @@
+.landing-page{
+
+    &__banner{
+        background-color: #eee;
+        background-image : url('../../../assets/images/bg3.jpg');
+        background-size: cover;
+        height: 100vh;
+        background-position: center;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            opacity: 0.5;
+        }
+    }
+
+    &__banner-logo{
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        font-family: 'Pacifico', cursive;
+        font-weight: lighter;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: rgba(255, 255, 255, 0.25);
+        text-shadow: 1px 1px 1px #000;
+        padding: 1rem;
+    }
+
+    .icon{
+        &--egg{
+            display: inline-block;
+            background-image : url('../../../assets/images/icon-egg.png'); 
+            width: 5.5rem;
+            height: 5.5rem;
+            background-size: contain;
+        }
+    }
+
+    &__banner-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        width: 70%;
+
+        h1{
+            font-weight: 300;
+            color: #ffd100;
+            text-shadow: 1px 1px 10px #000;   
+            text-align: left;
+            transition: 1s all ease-out;
+            
+            &:last-child{
+                text-align: right;
+            }
+        }
+
+        &.initial-state{
+            opacity: 0.1;         
+            h1{
+                transform: translateX(-70%);
+                
+                &:last-child{
+                    text-align: right;
+                    transform: translateX(70%);
+                }
+            }
+        }
+    }
+
+    &__order-btn{
+        background: rgba(0, 0, 0, 0.35);
+        width: 20rem;
+        height: 6rem;
+        border-radius: 1rem;
+        color: #fff;
+        position: absolute;
+        bottom: 9rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 2px solid #fff;
+        font-size: 1.75rem;
+        font-family: 'Roboto';
+        cursor: pointer;
+        box-shadow: 0px 0px 10px #000;        
+        transition: 0.3s all ease;
+
+        &:hover{
+            border-color: #ffd100;
+            color: #ffd100;
+            transform: translateY(-1rem);
+            box-shadow: 0px 15px 20px #000;
+        }
+
+        &:active{ 
+            transform: translateY(-0.5rem);
+            box-shadow: 0px 5px 20px #000;
+        }
+    }
+}
